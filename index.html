@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="tk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dovran</title><style>:root{--c:#22d39a}*{box-sizing:border-box}body{margin:0;background:#02050c;color:#e0efff;font-family:system-ui,sans-serif}h1{margin:0;font-size:22px;color:var(--c);text-shadow:0 0 12px var(--c)}header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--c);box-shadow:0 0 16px var(--c)}.bx{max-width:340px;margin:12vh auto;padding:26px;background:#060d1c;border:1px solid var(--c);border-radius:14px;box-shadow:0 0 24px var(--c)}.bx input,.bx button{width:100%;margin-top:12px}#le{color:#ff5c7a;font-size:13px;min-height:18px;margin-top:8px}main{padding:14px;max-width:760px;margin:0 auto}section,.st>div{background:#060d1c;border:1px solid #12306a;border-radius:12px;padding:14px;margin-bottom:12px}h2{margin:0 0 10px;font-size:16px;color:var(--c)}.st{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.st>div{margin:0}.st span{display:block;font-size:12px;color:#7f9cc4}.st b{font-size:26px;color:var(--c)}.row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}input,select{flex:1 1 110px;padding:10px;border:1px solid #12306a;border-radius:8px;background:#030816;color:inherit;font:inherit}button{background:var(--c);color:#02050c;border:0;border-radius:8px;padding:10px 14px;font-weight:700;cursor:pointer}.it{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-top:1px solid #0c1d40}.it small,section>small{display:block;color:#7f9cc4;word-break:break-all}.x{background:transparent;border:1px solid #ff5c7a;color:#ff5c7a}</style></head><body><section id="lg" class="bx"><h1>Dovran</h1><input id="lu" placeholder="Ulanyjy ady" autocomplete="username"><input id="lp" type="password" placeholder="Parol" autocomplete="current-password"><div id="le"></div><button id="lb">Girmek</button></section><div id="ap" style="display:none"><header><h1>Dovran</h1><button id="lo">Çykmak</button></header><main id="m"></main></div><script>var C={"id":"dovran-mwccyyg1","name":"Dovran","u":"Dovran","h":"a461441499622fb62b2682bd488d993bf1a66b8879f9d4accae06ddc4c13936f","servers":[{"n":"🇸🇪 Stockholm - Premium [CFT] 5#?serverDescription=U3RvY2tob2xt\n","l":"vless://2e69b088-6ef3-417f-8247-125cf257fafd@108.156.65.62:443?encryption=none&security=tls&sni=d3ctfyyianfwpq.cloudfront.net&fp=chrome&type=xhttp&mode=auto&host=d3ctfyyianfwpq.cloudfront.net&path=%2Fcf&fragment=3-3%2C0-1%2Ctlshello%2Cnull&fm=%7B%22tcp%22%3A%5B%7B%22settings%22%3A%7B%22delay%22%3A%220-1%22%2C%22length%22%3A%223-3%22%2C%22packets%22%3A%22tlshello%22%7D%2C%22type%22%3A%22fragment%22%7D%5D%7D#%F0%9F%87%B8%F0%9F%87%AA%20Stockholm%20-%20Premium%20%5BCFT%5D%205%23%3FserverDescription%3DU3RvY2tob2xt%0A"},{"n":"🇸🇪 Askabat - Premium [CFT] 5#?serverDescription=U3RvY2tob2xt\n","l":"vless://2e69b088-6ef3-417f-8247-125cf257fafd@108.156.65.62:443?encryption=none&security=tls&sni=d3ctfyyianfwpq.cloudfront.net&fp=chrome&type=xhttp&mode=auto&host=d3ctfyyianfwpq.cloudfront.net&path=%2Fcf&fragment=3-3%2C0-1%2Ctlshello%2Cnull&fm=%7B%22tcp%22%3A%5B%7B%22settings%22%3A%7B%22delay%22%3A%220-1%22%2C%22length%22%3A%223-3%22%2C%22packets%22%3A%22tlshello%22%7D%2C%22type%22%3A%22fragment%22%7D%5D%7D#%F0%9F%87%B8%F0%9F%87%AA%20Askabat%20-%20Premium%20%5BCFT%5D%205%23%3FserverDescription%3DU3RvY2tob2xt%0A"}],"max":50,"base":"https://panel.example.com"};(function rt(C){
+  var K="gp_"+C.id, D, $=function(i){return document.getElementById(i)};
+  try{D=JSON.parse(localStorage.getItem(K))}catch(e){}
+  D=D||[];
+  function E(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+  function S(){try{localStorage.setItem(K,JSON.stringify(D))}catch(e){}}
+  async function H(p){
+    if(!window.crypto||!crypto.subtle) return "p:"+p;
+    var b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode("vp::"+p));
+    return [].map.call(new Uint8Array(b),function(x){return ("0"+x.toString(16)).slice(-2)}).join("");
+  }
+  function code(){
+    var c="ABCDEFGHJKLMNPQRSTUVWXYZ23456789", a=new Uint8Array(12), r="";
+    crypto.getRandomValues(a);
+    for(var i=0;i<12;i++){r+=c[a[i]%c.length];if(i%4==3&&i<11)r+="-"}
+    return r;
+  }
+  function uid(){
+    var a=new Uint8Array(16); crypto.getRandomValues(a); a[6]=a[6]&15|64; a[8]=a[8]&63|128;
+    var h=[].map.call(a,function(x){return ("0"+x.toString(16)).slice(-2)}).join("");
+    return h.slice(0,8)+"-"+h.slice(8,12)+"-"+h.slice(12,16)+"-"+h.slice(16,20)+"-"+h.slice(20);
+  }
+  async function links(x){
+    var out=[], bad=[], k, s, l, i;
+    for(k=0;k<C.servers.length;k++){
+      s=C.servers[k];
+      l=s.l.split("{name}").join(encodeURIComponent(x.n)).split("{uuid}").join(x.u);
+      if(/^https:\/\//i.test(l)){
+        try{
+          var ac=new AbortController(), tm=setTimeout(function(){ac.abort()},8000);
+          var r=await fetch(l,{signal:ac.signal}); clearTimeout(tm);
+          var t=(await r.text()).trim(), d=t;
+          try{var dd=atob(t.replace(/\s/g,"")); if(dd.indexOf("://")>-1){try{d=decodeURIComponent(escape(dd))}catch(e){d=dd}}}catch(e){}
+          var got=d.split(/\r?\n/).map(function(z){return z.trim()}).filter(function(z){return /^(vless|vmess|trojan|ss|hy2|hysteria2|tuic):\/\//i.test(z)});
+          if(!got.length) throw 0;
+          got.forEach(function(z,j){
+            var h=z.indexOf("#"); if(h>-1) z=z.slice(0,h);
+            out.push(z+"#"+encodeURIComponent(s.n+(got.length>1?" "+(j+1):"")+" | "+x.n));
+          });
+        }catch(e){bad.push(s.n)}
+      }else{
+        i=l.indexOf("#"); if(i>-1) l=l.slice(0,i);
+        out.push(l+"#"+encodeURIComponent(s.n+" | "+x.n));
+      }
+    }
+    return {l:out,bad:bad};
+  }
+  async function sub(x){var r=await links(x);return {t:"#profile-title: "+x.n+"\n"+r.l.join("\n"),bad:r.bad}}
+  function b64(t){return btoa(unescape(encodeURIComponent(t)))}
+  function base(){return location.protocol.indexOf("http")==0?location.origin:C.base}
+  function cp(t,btn){
+    try{navigator.clipboard.writeText(t);var o=btn.textContent;btn.textContent="Göçürildi";setTimeout(function(){btn.textContent=o},1500)}catch(e){prompt("Göçür:",t)}
+  }
+  function R(){
+    var h="<div class='st'><div><span>Kodlar</span><b>"+D.length+(C.max?" / "+C.max:"")+"</b></div><div><span>Serwerler</span><b>"+C.servers.length+"</b></div></div>";
+    h+="<section><h2>Täze kod</h2><div class='row'><input id='cn' placeholder='Ulanyjy ady'><input id='cd' type='number' value='30' min='1' title='Gün'><input id='cg' type='number' value='50' min='1' title='GB'><button id='cm'>Kod döret</button></div><small>Ady · möhlet (gün) · traffic (GB). Ähli serwerler 1 Happ-a jemlenýär.</small></section>";
+    h+="<section><h2>Kodlar</h2>"+(D.map(function(x,i){
+      return "<div class='it' style='flex-wrap:wrap'><div><b>"+E(x.n)+"</b><small>"+E(x.c)+"</small><small>"+C.servers.length+" serwer · "+x.d+" gün · "+x.g+" GB</small></div><div style='display:flex;gap:6px;flex-wrap:wrap'><button data-ln='"+i+"'>Happ linkler</button><button data-hp='"+i+"'>Happ URL</button><button data-fl='"+i+"'>Faýl</button><button class='x' data-del='"+i+"'>Poz</button></div></div>";
+    }).join("")||"<small>Heniz kod ýok.</small>")+"<small style='margin-top:10px'>Happ linkler: bas, Happ-da + → Paste. Happ URL işlemegi üçin Faýl-y sub/ papkasyna ýükle.</small></section>";
+    $("m").innerHTML=h;
+  }
+  function show(){$("lg").style.display="none";$("ap").style.display="block";R()}
+  document.addEventListener("click",async function(e){
+    var t=e.target, id=t.id, d=t.dataset, x;
+    if(id==="lb"){
+      var ok=$("lu").value.trim()===C.u && (await H($("lp").value))===C.h;
+      if(ok){try{sessionStorage.setItem("gs_"+C.id,"1")}catch(z){}show()}else $("le").textContent="Ulanyjy ady ýa-da parol nädogry";
+    }
+    if(id==="lo"){try{sessionStorage.removeItem("gs_"+C.id)}catch(z){}location.reload()}
+    if(id==="cm"){
+      var n=$("cn").value.trim(), dd=+$("cd").value, g=+$("cg").value;
+      if(!n||dd<1||g<1||!C.servers.length){alert("Ähli ýerleri dolduryň");return}
+      if(C.max&&D.length>=C.max){alert("Kod çägi doldy");return}
+      D.push({n:n,c:code(),u:uid(),d:dd,g:g});S();R();
+    }
+    if(d.ln!==undefined){
+      x=D[+d.ln];var o=t.textContent;t.textContent="Garaş...";
+      var r1=await links(x);t.textContent=o;cp(r1.l.join("\n"),t);
+      if(r1.bad.length)alert("Okalmady (https serwer rugsat bermedi ýa-da ýalňyş): "+r1.bad.join(", "));
+    }
+    if(d.hp!==undefined){x=D[+d.hp];cp("happ://add/"+base()+"/sub/"+x.c+".txt",t)}
+    if(d.fl!==undefined){
+      x=D[+d.fl];var o2=t.textContent;t.textContent="Garaş...";
+      var r2=await sub(x);t.textContent=o2;
+      if(r2.bad.length)alert("Okalmady (https serwer rugsat bermedi ýa-da ýalňyş): "+r2.bad.join(", "));
+      var bl=new Blob([b64(r2.t)],{type:"text/plain"}), a=document.createElement("a");
+      a.href=URL.createObjectURL(bl);a.download=x.c+".txt";document.body.appendChild(a);a.click();a.remove();
+    }
+    if(d.del!==undefined && confirm("Pozmalymy?")){D.splice(+d.del,1);S();R()}
+  });
+  try{if(sessionStorage.getItem("gs_"+C.id))show()}catch(e){}
+})(C)</script></body></html>
